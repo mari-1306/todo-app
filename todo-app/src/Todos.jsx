@@ -30,9 +30,9 @@ function Todos() {
   const deleteAll = () => {
     setTodos([]);
   };
-
-  if (loading) return <h2>Cargando...</h2>;
-  if (!todos.length) return <h2>No hay tareas disponibles.</h2>;
+// src/components/Todos.jsx (actualización final)
+if (loading) return <h2>Cargando...</h2>;
+if (!todos.length) return <h2>No hay tareas disponibles.</h2>;
 
   return (
     <div>
