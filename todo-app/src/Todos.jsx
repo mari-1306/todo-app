@@ -1,4 +1,4 @@
-// src/components/Todos.jsx
+// src/components/Todos.jsx (actualización)
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -20,6 +20,7 @@ function Todos() {
   }, []);
 
   if (loading) return <h2>Cargando...</h2>;
+  if (!todos.length) return <h2>No hay tareas disponibles.</h2>;
 
   return (
     <div>
