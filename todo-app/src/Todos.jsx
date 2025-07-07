@@ -19,6 +19,14 @@ function Todos() {
       });
   }, []);
 
+  const toggleCompletion = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
+
   if (loading) return <h2>Cargando...</h2>;
   if (!todos.length) return <h2>No hay tareas disponibles.</h2>;
 
@@ -29,6 +37,9 @@ function Todos() {
         {todos.map((todo) => (
           <li key={todo.id}>
             {todo.title} - {todo.completed ? 'Completado' : 'Pendiente'}
+            <button onClick={() => toggleCompletion(todo.id)}>
+              {todo.completed ? 'Marcar como Pendiente' : 'Marcar como Completado'}
+            </button>
           </li>
         ))}
       </ul>
