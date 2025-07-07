@@ -1,12 +1,12 @@
 // src/components/Filters.jsx
 import React from 'react';
 
-function Filters({ onFilterChange }) {
+function Filters() {
   return (
     <div>
-      <button onClick={() => onFilterChange('all')}>Todos</button>
-      <button onClick={() => onFilterChange('completed')}>Completados</button>
-      <button onClick={() => onFilterChange('pending')}>Pendientes</button>
+      <button disabled>Todos</button>
+      <button disabled>Completados</button>
+      <button disabled>Pendientes</button>
     </div>
   );
 }
