@@ -1,12 +1,26 @@
-# React + Vite
+# Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es una aplicación de tareas construida con React, donde se pueden realizar las siguientes acciones:
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Navegar entre vistas: Página principal, Todos y Registro.
+- Crear nuevos todos con un formulario controlado.
+- Ver una lista de todos los todos.
+- Marcar todos como completados o pendientes.
+- Editar todos.
+- Filtros para mostrar tareas completadas o pendientes.
+- Eliminar todos los todos de la lista.
+- Validación básica en formularios.
 
-## Expanding the ESLint configuration
+## Requisitos
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js (versión LTS)
+- React y React Router
+
+## Uso
+
+1. Clona el repositorio.
+2. Ejecuta `npm install` para instalar las dependencias.
+3. Ejecuta `npm run dev` para iniciar la aplicación.
+
