@@ -1,6 +1,7 @@
 // src/components/Todos.jsx (actualización)
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import TodoList from './TodoList';
 
 function Todos() {
   const [todos, setTodos] = useState([]);
@@ -27,27 +28,13 @@ function Todos() {
     );
   };
 
-  const deleteAll = () => {
-    setTodos([]);
-  };
-// src/components/Todos.jsx (actualización final)
-if (loading) return <h2>Cargando...</h2>;
-if (!todos.length) return <h2>No hay tareas disponibles.</h2>;
+  if (loading) return <h2>Cargando...</h2>;
+  if (!todos.length) return <h2>No hay tareas disponibles.</h2>;
 
   return (
     <div>
       <h2>Lista de Tareas</h2>
-      <button onClick={deleteAll}>Eliminar Todos</button>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>
-            {todo.title} - {todo.completed ? 'Completado' : 'Pendiente'}
-            <button onClick={() => toggleCompletion(todo.id)}>
-              {todo.completed ? 'Marcar como Pendiente' : 'Marcar como Completado'}
-            </button>
-          </li>
-        ))}
-      </ul>
+      <TodoList todos={todos} toggleCompletion={toggleCompletion} />
     </div>
   );
 }
