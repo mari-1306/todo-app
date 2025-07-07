@@ -27,12 +27,17 @@ function Todos() {
     );
   };
 
+  const deleteAll = () => {
+    setTodos([]);
+  };
+
   if (loading) return <h2>Cargando...</h2>;
   if (!todos.length) return <h2>No hay tareas disponibles.</h2>;
 
   return (
     <div>
       <h2>Lista de Tareas</h2>
+      <button onClick={deleteAll}>Eliminar Todos</button>
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
