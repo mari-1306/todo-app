@@ -1,4 +1,4 @@
-// src/components/TodoItem.jsx (actualización)
+// src/components/TodoItem.jsx
 import React, { useState } from 'react';
 import EditTodo from './EditTodo';
 
@@ -6,9 +6,8 @@ function TodoItem({ todo, toggleCompletion }) {
   const [isEditing, setIsEditing] = useState(false);
 
   const handleSave = (updatedTodo) => {
+    console.log('Todo actualizado (sin lógica real):', updatedTodo);
     setIsEditing(false);
-    // Aquí puedes actualizar el todo en la lista
-    console.log('Todo actualizado:', updatedTodo);
   };
 
   return (
